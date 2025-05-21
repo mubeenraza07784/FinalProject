@@ -1,5 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+}
+body{
+    max-width: 1200px;
+    margin: auto;
+}
+:root {
+    --primarycolor: #FFFFFF;
+    --secondarycolor: #FF5151;
+    --tertiarycolor: #6E6E6E;
+    --quaternarycolor: #FF8585;
+    --neutralgrey: (lightgrey);
+    --backgroundcolor: rgba(255, 255, 255, 0.4);
+    --transparentcolor: transparent;
+    --sectionColor: #252525;
+    --charcoal: #36454F;
+    --font-family: "Inter", sans-serif;
+    --mainheading: #36454F;
+    --jetblack: #36454F;
+    --headercolor: #121212;
+    --left-right-padding:0px 20px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url('../images/09.gif');
+    background-repeat: no-repeat; 
+    background-color: white;
+    background-position: center;
+    display: none;
+    
+}
+
+header{
+    background-color:var(--headercolor) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--left-right-padding);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+header nav{
+    display: flex;
+    padding-right: 330px;
+}
+header nav ul{
+    display: flex;
+    gap: 12px;
+    
+}
+header nav ul li{
+    list-style-type: none;
+    font-family: var(--font-family);
+    font-size: 17px;
+    
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--primarycolor);
+    padding: 5px;
+    border-radius: 5px;
+
+    
+}
+header nav ul li a:hover{
+    background-color: var(--secondarycolor)
+    
 }
