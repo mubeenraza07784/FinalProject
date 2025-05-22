@@ -3,62 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Importing JQuery -->
+    <title>Potongln | Barber Shop And Haircut</title>  
+
+    <!-- Importing Libraries -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Importing Waypoints -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-    <!-- Importing Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Importing  Sweet Alerts CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
-    <!-- Importing  Sweet Alerts JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-
-    <!-- Importing Fancybox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
-
-    <!-- Importing Fancybox JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-
-    <!-- Importing Animation Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  
-    <!-- style sheet Attached -->
+    <!-- Custom Files -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- script attached -->
-    <script src="javasctipt/script.js"></script>
-
-    <!-- Website title will appear in browser window -->
-    <title>Potongln|Barber Shop And Haircut</title>  
-  
+    <script src="javascript/script.js"></script>
 
 </head>
 <body>
-    <!-- page loader -->
-    <div class="loader"> </div>
-    <div class="container">
-    <!-- header start -->
-     <header>
-        <!-- header logo -->
-        <img src="images/nav-logo.png" alt="Potongln-logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </nav>
-     </header>
+    <!-- Page Loader -->
+    <div class="loader"></div>
 
+    <!-- Main Container (Hidden by JS until loader finishes) -->
+    <div class="container">
+        <header>
+            <img src="images/nav-logo.png" alt="Potongln-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero-container hero-section section-container-hero"></section>
+        </main>
     </div>
-    <!-- Importing Jquery Validation Methods Library -->
-    <script src="../scripts/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
-    <script type="module" src="../scripts/jquery-validation-1.19.5/dist/additional-methods.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="javascripts/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script type="module" src="javascript/jquery-validation-1.19.5/dist/additional-methods.min.js"></script>
 </body>
 </html>

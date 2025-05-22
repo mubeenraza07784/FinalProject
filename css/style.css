@@ -1,29 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@400;500;600;700&display=swap');
 
-*{
-    padding: 0px;
-    margin: 0px;
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #FF5151;
+    --accent-dark: #D04040;
+    --text-color: #121212;
+    --subtext-color: #6e6e6e;
+    --bg-color: #f9f9f9;
+    --header-bg: #1a1a1a;
+    --section-bg: #252525;
+    --font-main: 'Inter', sans-serif;
+    --padding-side: 1rem 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
-    max-width: 1200px;
-    margin: auto;
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
 }
-:root {
-    --primarycolor: #FFFFFF;
-    --secondarycolor: #FF5151;
-    --tertiarycolor: #6E6E6E;
-    --quaternarycolor: #FF8585;
-    --neutralgrey: (lightgrey);
-    --backgroundcolor: rgba(255, 255, 255, 0.4);
-    --transparentcolor: transparent;
-    --sectionColor: #252525;
-    --charcoal: #36454F;
-    --font-family: "Inter", sans-serif;
-    --mainheading: #36454F;
-    --jetblack: #36454F;
-    --headercolor: #121212;
-    --left-right-padding:0px 20px;
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-side);
+    height: 80px;
+    opacity: 1.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+}
+
+header img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.container {
+    display: none;
 }
 
 .loader {
@@ -32,50 +94,47 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    background: #fff url('../images/09.gif') center center no-repeat;
     z-index: 9999;
-    background-image: url('../images/09.gif');
-    background-repeat: no-repeat; 
-    background-color: white;
-    background-position: center;
     display: none;
-    
+}
+.hero-container{
+    background: url(../images/hero-image.png) no-repeat center / cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 80px; 
+}
+.hero-container::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(36, 36, 36, 0.6);
+}
+.section-counter-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 130px;
+    gap: 15px;
 }
 
-header{
-    background-color:var(--headercolor) ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--left-right-padding);
-    padding-top: 10px;
-    padding-bottom: 10px;
+/* Responsive Design for header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
 
-}
-header nav{
-    display: flex;
-    padding-right: 330px;
-}
-header nav ul{
-    display: flex;
-    gap: 12px;
-    
-}
-header nav ul li{
-    list-style-type: none;
-    font-family: var(--font-family);
-    font-size: 17px;
-    
-    
-}
-header nav ul li a{
-    text-decoration: none;
-    color: var(--primarycolor);
-    padding: 5px;
-    border-radius: 5px;
-
-    
-}
-header nav ul li a:hover{
-    background-color: var(--secondarycolor)
-    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
 }
