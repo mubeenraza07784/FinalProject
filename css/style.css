@@ -1,18 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@400;500;600;700&display=swap');
+/* fonts */
+@font-face {
+    font-family: "Inter";
+    src: url(../font/Inter.ttf);
+}
 
+/* roots */
 :root {
     --primary-color: #ffffff;
-    --accent-color: #FF5151;
+    --secondry-color: #FF5151;
     --accent-dark: #D04040;
     --text-color: #121212;
     --subtext-color: #6e6e6e;
     --bg-color: #f9f9f9;
     --header-bg: #1a1a1a;
     --section-bg: #252525;
-    --font-main: 'Inter', sans-serif;
+    --font-family: 'Inter', sans-serif;
     --padding-side: 1rem 2rem;
+    --tertiarycolor: #6E6E6E;
+    --mainheading: #36454F;
 }
 
+/* basic style */
 * {
     margin: 0;
     padding: 0;
@@ -20,12 +28,13 @@
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--bg-color);
     line-height: 1.6;
 }
 
+/* header starts */
 img {
     max-width: 100%;
     display: block;
@@ -84,8 +93,50 @@ header nav ul li a:hover {
     color: #fff;
 }
 
+/* loader starts */
 .container {
     display: none;
+
+}
+
+.background {
+    background: url("../images/bg111.jpg") center / cover no-repeat fixed;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: -1;
+    animation: waterFlow 15s ease-in-out infinite;
+    position: absolute;
+    top: 817px;
+    height: 1000vh;
+    width: 100%;
+}
+
+@keyframes waterFlow {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100%;
+    }
+
+    25% {
+        background-position: 50% 10%;
+        background-size: 105%;
+    }
+
+    50% {
+        background-position: 100% 20%;
+        background-size: 110%;
+    }
+
+    75% {
+        background-position: 50% 30%;
+        background-size: 105%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+        background-size: 100%;
+    }
 }
 
 .loader {
@@ -98,15 +149,18 @@ header nav ul li a:hover {
     z-index: 9999;
     display: none;
 }
-.hero-container{
+
+/* section one start */
+.home-section-one-hero-container {
     background: url(../images/hero-image.png) no-repeat center / cover;
     height: 100vh;
     width: 100%;
     z-index: 2;
-    position: absolute;
-    top: 80px; 
+    position: relative;
+    top: 80px;
 }
-.hero-container::before{
+
+.home-section-one-hero-container::before {
     content: '';
     position: absolute;
     z-index: 2;
@@ -116,13 +170,431 @@ header nav ul li a:hover {
     bottom: 0;
     background-color: rgba(36, 36, 36, 0.6);
 }
-.section-counter-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 130px;
-    gap: 15px;
+
+.home-section-two-counter-container {
+    position: relative;
+    height: 162px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    padding: 0px 6rem;
 }
 
+.home-section-two-counter-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 3.5em;
+
+
+}
+
+.home-section-two-first-count p {
+    color: var(--tertiarycolor);
+}
+
+.home-section-two-second-count p {
+    color: var(--tertiarycolor);
+}
+
+.home-section-two-third-count p {
+    color: var(--tertiarycolor);
+}
+
+.home-section-two-counter {
+    padding-bottom: .5em;
+    color: var(--secondry-color);
+}
+
+.home-section-two-shedule-box {
+    display: flex;
+    gap: 40px;
+    padding-right: 14.5em;
+    margin-top: -4.8em;
+}
+
+.home-section-two-shop-schedule-container {
+    background-color: var(--secondry-color);
+    padding: 1em;
+    height: 230px;
+    width: 235px;
+    color: var(--primary-color);
+}
+
+.home-section-two-shop-schedule-container>img {
+    padding-bottom: 15px;
+}
+
+.home-section-two-schedule-text-container h4 {
+    font-size: 1.4rem;
+    padding-bottom: 0.4em;
+}
+
+.home-section-two-schedule-text-container p {
+    padding-bottom: 0.3em;
+}
+
+/*======================================================================================= section three */
+.home-section-three-about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    place-items: center;
+}
+
+.home-section-three-about-image1 {
+    position: relative;
+    top: 130px;
+    left: -50px;
+}
+
+.home-section-three-about-image1 img {
+    width: 350px;
+    margin-left: 8px;
+}
+
+.home-section-three-about-image2 {
+    position: relative;
+    position: relative;
+    top: -110px;
+    left: 100px;
+}
+
+.home-section-three-about-content-container {
+    padding: 30px;
+}
+
+.home-section-three-about-content-title h3 {
+    font-family: var(--font-family);
+    font-size: 15px;
+    color: var(--secondry-color);
+    line-height: 15px;
+    letter-spacing: 1.5px;
+}
+
+.home-section-three-about-content-title h2 {
+    font-family: var(--font-family);
+    font-size: 40px;
+    color: var(--mainheading);
+    margin: 20px 0;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    word-break: break-word;
+    max-width: 530px;
+
+}
+
+.home-section-three-about-content-text p {
+    font-family: var(--font-family);
+    font-size: 17px;
+    color: var(--tertiarycolor);
+    line-height: 25px;
+    padding: 0 20px 0 0;
+    text-align: justify;
+    word-break: break-word;
+    max-width: 530px;
+}
+
+
+.home-section-three-list-item ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.home-section-three-list-item ul li {
+    font-family: var(--font-family);
+    font-size: 17px;
+    color: var(--tertiarycolor);
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.home-section-three-list-item ul li span {
+    background-color: var(--secondry-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.home-section-three-list-item ul li span i {
+    color: var(--primarycolor);
+    text-align: center;
+    padding: 5px;
+
+}
+
+/*=================================================================================== section-three-ends */
+/*==================================================================================== section-four-starts */
+.home-section-four-container-services {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+.home-section-four-service-content-title h3 {
+    font-family: var(--font-family);
+    font-size: 15px;
+    color: var(--secondry-color);
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-section-four-service-content-title h2 {
+    font-family: var(--font-family);
+    font-size: 40px;
+    color: var(--mainheading);
+    margin: 20px 0;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+
+
+.home-section-four-service-content-text p {
+    font-family: var(--font-family);
+    font-size: 17px;
+    color: var(--tertiarycolor);
+    line-height: 25px;
+    text-align: center;
+}
+
+.home-section-four-service-cards-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.home-section-four-service-card-container {
+    width: 530px;
+    height: 250px;
+    margin: 10px 10px 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--secondry-color);
+
+}
+
+.home-section-four-service-card-details img {
+    padding-left: 7.6em;
+}
+
+.home-section-four-service-card-details h4,
+.home-section-four-service-card-details p {
+    margin: 20px 0;
+}
+
+.home-section-four-service-card-container:nth-child(2n+1) {
+    background-color: var(--secondry-color);
+}
+
+/*---------------------------------------------------------------------------------------- section-four-ended */
+/* ======================================================================================= section-five-starts */
+.home-section-five-whyBox-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 60px;
+    margin-bottom: 250px;
+    width: 90%;
+    margin: 3em auto;
+}
+
+.home-section-five-whyBox-content-container {
+    grid-column: 1/7;
+}
+
+.home-section-five-whyBox-video-container {
+    grid-column: 7/-1;
+}
+
+.home-section-five-whyBox-video-container a img {
+    width: 100%;
+    height: 760px;
+}
+
+.home-section-five-whyBox-content-title h3 {
+    font-family: var(--font-family);
+    font-size: 15px;
+    color: var(--secondry-color);
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+
+.home-section-five-whyBox-content-title h2 {
+    font-family: var(--font-family);
+    font-size: 40px;
+    color: var(--mainheading);
+    margin: 20px 0;
+    line-height: 50px;
+    word-break: break-word;
+}
+
+.home-section-five-whyBox-content-text p {
+    font-family: var(--font-family);
+    font-size: 17px;
+    color: var(--tertiarycolor);
+    line-height: 25px;
+}
+
+.home-section-five-whyBox-achievement-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/7;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.home-section-five-whyBox-achievement-Box:nth-child(1),
+.home-section-five-whyBox-achievement-Box:nth-child(3) {
+    grid-column: 1/7;
+}
+
+.home-section-five-whyBox-achievement-Box:nth-child(2),
+.home-section-five-whyBox-achievement-Box:nth-child(4) {
+    grid-column: 7/-1;
+}
+
+.home-section-five-whyBox-achievement-container h4 {
+    font-family: var(--font-family);
+    font-size: 25px;
+    color: var(--jetblack);
+    margin: 5px 0;
+}
+
+.home-section-five-whyBox-achievement-container p {
+    font-family: var(--font-family);
+    font-size: 17px;
+    color: var(--tertiarycolor);
+    line-height: 25px;
+    word-break: break-word;
+    max-width: 530px;
+}
+
+/*---------------------------------------------------------------------------------------- section-five-ends */
+/*========================================================================================= section-six-starts */
+.pricing-container {
+  padding-top: 234px;
+}
+
+.pricing-content-title h3 {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--secondry-color);
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pricing-content-title h2 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  color: var(--mainheading);
+  margin: 20px 0;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.pricing-content-text p {
+  font-family: var(--font-family);
+  font-size: 17px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  text-align: center;
+  max-width: 500px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.pricing-cards-container {
+  display: grid;
+  gap: 20px 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.pricing-card-container {
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card-container:hover {
+  background-color: var(--secondry-color);
+  transform: scaleY(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents h2,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents h3,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .pricing-card-contents p,
+.container .section-container-pricing .pricing-container .pricing-cards-container .pricing-card-container:hover .list-item ul li {
+  color: var(--primary-color);
+}
+
+.pricing-card-container:hover .button-reservation-container a {
+  background-color: var(--primary-color);
+  color: var(--secondry-color);
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+.pricing-card-contents h2 {
+  font-family: var(--font-family);
+  font-size: 35px;
+  color: var(--mainheading);
+  line-height: 43.8px;
+  margin: 10px;
+}
+
+.pricing-card-contents h3 {
+  font-family: var(--font-family);
+  font-size: 50px;
+  color: var(--secondry-color);
+  line-height: 80px;
+  margin: 15px;
+  word-break: break-word;
+}
+
+.pricing-card-contents p,
+.pricing-card-contents ul li {
+  font-family: var(--font-family);
+  font-size: 17px;
+  color: var(--tertiarycolor);
+  line-height: 25px;
+  margin: 40px 20px;
+}
+
+.button-reservation-container {
+  margin-top: 30px;
+  justify-content: flex-start;
+  background-color: var(--secondry-color);
+  width: 7em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------------------------ section-six-ends */
 /* Responsive Design for header */
 @media (max-width: 768px) {
     header {
