@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US | Potongln</title>
+
+    <!-- Importing Libraries -->
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <!-- Custom Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
+
+
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="loader"></div>
+
+    <!-- Main Container (Hidden by JS until loader finishes) -->
+    <div class="container">
+        <!-- Header starts -->
+        <header>
+            <a href="./index.html"><img src="images/nav-logo.png" alt="Potongln-logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="nav-button-container">
+                <a href="contactus.html">Reservation</a>
+            </div>
+        </header>
+        <!-------------------------------------------------------------------------------------------- header ends -->
+        <!-------------------------------------------------------------------------------------------- main starts -->
+        <main>
+            <!-- --------------------------------------------------------------------------------------section-one starts -->
+            <section id="contactus-section-one" class="contactus-section-one-hero-container" data-aos="fade-up"
+                data-aos-duration="2500">
+                <div class="contactus-section-one-hero-image">
+                    <h1 class="contactus-section-one-hero-heading">Contact US</h1>
+                </div>
+            </section>
+            <!-- --------------------------------------------------------------------------------------------------section-two starts -->
+            <section class="home-section-nine-container-contact">
+                <div class="home-section-nine-contact-container">
+                    <div class="home-section-nine-contact-content-container" data-aos="fade-up"
+                        data-aos-duration="2500">
+                        <div class="home-section-nine-contact-content-title">
+                            <h3>Connect With Our Experts</h3>
+                            <h2>Reach out to our expert barbers we’re here to elevate your style.</h2>
+                        </div>
+                        <div class="home-section-nine-contact-content-text">
+                            <p>Let's connect with us and get in touch with our professionals for top-notch grooming
+                                services. We're
+                                here to elevate your style and enhance your grooming experience.</p>
+                        </div>
+                        <address class="home-section-nine-contact-info">
+                            <p>
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                                Karangploso District, Malang Regency, East Java
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                <a href="mailto:potongin@gmail.com">potongin@gmail.com</a>
+                            </p>
+                            <p>
+                                <span><i class="fa-solid fa-phone"></i></span>
+                                <a href="tel:+6285112345678">(+62) 851 1234 5678</a>
+                            </p>
+                        </address>
+                    </div>
+                    <div class="home-section-nine-contact-map-container" data-aos="fade-up" data-aos-duration="2500">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?height=370&wkst=1&ctz=Asia%2FKarachi&showPrint=0&showTitle=0&src=MDUyNGM1ZTg0YmVjNTM2Nzc4ZjU0NTBlM2UxMzY2MGU1ZmJiZGVmYTE1MWVjZTkwMzgxZmNmZmQ0OGU2YTY0ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285f4&color=%230b8043"
+                            style="border:solid 1px #777" width="600" height="370"></iframe>
+
+
+                        <div class="home-section-nine-contact-form-container" data-aos="fade-up"
+                            data-aos-duration="2500">
+                            <form id="home-section-nine-contact-form">
+                                <div class="home-section-nine-form">
+                                    <div class="home-section-nine-form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                                    </div>
+                                    <div class="home-section-nine-form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="home-section-nine-form">
+                                    <div class="home-section-nine-form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" name="email" id="email" placeholder="Email Address">
+                                    </div>
+                                    <div class="home-section-nine-form-group">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="home-section-nine-form">
+                                    <div class="home-section-nine-form-group">
+                                        <label for="message">Message</label>
+                                        <textarea name="message" id="message" cols="45" rows="5"
+                                            placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="home-section-nine-submit-button">
+                                    <input type="submit" value="Send Message">
+                                </div>
+                            </form>
+                            <div id="home-section-nine-successModal" class="home-section-nine-modal">
+                                <div class="home-section-nine-modal-content">
+                                    <span class="home-section-nine-close-btn">&times;</span>
+                                    <h2>Thank You!</h2>
+                                    <p>Thanks for reaching out! We’ll get back to you within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-section-nine-map-container" data-aos="fade-up" data-aos-duration="2500">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.8586899022065!2d-122.08424948469357!3d37.42199977982211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba2f5b4f2f1d%3A0xb3f65d45d90e7b0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614766909443!5m2!1sen!2sus"
+                            width="100%" height="400" style="border:0;"></iframe>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <!------------------------------------------------------------------------------------ footer-starts -->
+        <footer class="footer-container">
+            <div class="footer-main">
+                <div class="footer-content-container">
+                    <div class="footer-logo">
+                        <img src="./images/nav-logo.png" alt="footer-logo">
+                    </div>
+                    <div class="footer-text">
+                        <p>PotongIn Barbershop embodies the perfect fusion of style and confidence, where every haircut
+                            is
+                            meticulously crafted by the skilled hands of our experienced barbers.</p>
+                    </div>
+
+                </div>
+                <div class="footer-quick-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li>
+                            <span><i class="fa-solid fa-caret-right"></i></span>
+                            <a href="index.html" target="_blank">HomePage</a>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-caret-right"></i></span>
+                            <a href="about.html" target="_blank">About Us</a>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-caret-right"></i></span>
+                            <a href="services.html" target="_blank">Our Services</a>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-caret-right"></i></span>
+                            <a href="#home-section-six-container-pricings" target="_blank">Our Packages</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-company-details">
+                    <h3>Our Company</h3>
+                    <p>Opens Everyday</p>
+                    <p>08:00-21:00 WB</p>
+                    <address class="contact-info">
+                        <p>
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            Karangploso District, Malang Regency, East Java
+                        </p>
+                        <p>
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:potongin@gmail.com">potongin@gmail.com</a>
+                        </p>
+                        <p>
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+6285112345678">(+62) 851 1234 5678</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </footer>
+        <!------------------------------------------------------------------------------------ footer-end -->
+    </div>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="javascript/jquery-migrate-1.2.1.min.js"></script>
+    <script src="javascript/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

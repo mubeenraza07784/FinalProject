@@ -7,20 +7,23 @@
     <title>Potongln | Barber Shop And Haircut</title>
 
     <!-- Importing Libraries -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
     <!-- Custom Files -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/script.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
 
 </head>
 
@@ -32,7 +35,8 @@
     <div class="container">
         <!-- Header starts -->
         <header>
-            <a href="./index.html"><img src="images/nav-logo.png" alt="Potongln-logo"></a>
+            <a href="index.html"><img src="images/nav-logo.png" alt="PotongIn Barbershop Logo"></a>
+
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -41,18 +45,25 @@
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="nav-button-container">
+                <a href="contactus.html">Reservation</a>
+            </div>
         </header>
         <!-- header ends -->
         <!-- main starts -->
         <main>
             <!-- section-one starts -->
-            <section id="section-one" class="home-section-one-hero-container"></section>
+            <section id="section-one" class="home-section-one-hero-container" data-aos="fade-up"
+                data-aos-duration="1000"></section>
             <!-- section one ends -->
             <!-- background -->
             <div class="background"></div>
             <!-- section two starts -->
             <section id="section-two">
-                <div class="home-section-two-counter-container">
+                <div class="home-section-two-counter-container" data-aos="fade-up">
                     <div class="home-section-two-counter-section">
                         <div class="home-section-two-first-count">
                             <div class="home-section-two-counter" data-target="40">0</div>
@@ -68,8 +79,7 @@
                         </div>
                     </div>
                     <div class="home-section-two-shedule-box">
-                        <div
-                            class="home-section-two-shop-schedule-container">
+                        <div class="home-section-two-shop-schedule-container">
                             <img src="images/clock.png" alt="clock-icon">
                             <div class="home-section-two-schedule-text-container">
                                 <h4>Open Hours</h4>
@@ -78,8 +88,7 @@
 
                             </div>
                         </div>
-                        <div
-                            class="home-section-two-shop-schedule-container">
+                        <div class="home-section-two-shop-schedule-container">
                             <img src="images/clock.png" alt="clock-icon">
                             <div class="home-section-two-schedule-text-container">
                                 <h4>Let's Talk With Us</h4>
@@ -93,7 +102,7 @@
             </section>
             <!---------------------------------------------------------------------- section two ends -->
             <!--------------------------------------------------------------------- section three starts -->
-            <section class="home-section-three-container-about">
+            <section class="home-section-three-container-about" data-aos="fade-up" data-aos-duration="2000">
                 <div class="home-section-three-about-container">
                     <div class="home-section-three-about-image-container">
                         <div class="home-section-three-about-image1">
@@ -132,7 +141,7 @@
 
             <!-- section three ends -->
             <!-- section-four-starts -->
-            <section class="home-section-four-container-services">
+            <section class="home-section-four-container-services" data-aos="fade-up" data-aos-duration="2000">
                 <div class="home-section-four-services-container">
                     <div class="home-section-four-service-content-container">
                         <div class="home-section-four-service-content-title">
@@ -183,7 +192,8 @@
             </section>
             <!-- section-four-ends -->
             <!-- section-five-starts -->
-            <section id="section-five" class="home-section-five-container-whyBox">
+            <section id="section-five" class="home-section-five-container-whyBox" data-aos="fade-up"
+                data-aos-duration="2000">
                 <article class="home-section-five-whyBox-container">
                     <article class="home-section-five-whyBox-content-container">
                         <div class="home-section-five-whyBox-content-title">
@@ -198,7 +208,7 @@
                     </article>
                     <article class="home-section-five-whyBox-video-container">
                         <a data-fancybox href="https://www.youtube.com/watch?v=UV0mhY2Dxr0">
-                            <img src="./images/RightColumn.png" alt="Watch video about our services"
+                            <img src="./images/img3-masonary.jpg" alt="about our services"
                                 class="home-section-five-video-thumbnail">
                         </a>
                     </article>
@@ -228,7 +238,8 @@
             </section>
             <!-- section-five-ends -->
             <!-- section-six-starts -->
-            <section class="home-section-six-container-pricing">
+            <section id="home-section-six-container-pricings" class="home-section-six-container-pricing"
+                data-aos="fade-up" data-aos-duration="2000">
                 <div class="home-section-six-pricing-container">
                     <div class="home-section-six-pricing-content-container">
                         <div class="home-section-six-pricing-content-title">
@@ -263,7 +274,7 @@
                             </div>
                             <hr>
                             <div class="home-section-six-button-reservation-container">
-                                <a href="./contact-us.html">Reservation</a>
+                                <a href="contactus.html">Reservation</a>
                             </div>
                         </div>
                         <div class="home-section-six-pricing-card-container">
@@ -286,7 +297,7 @@
                             </div>
                             <hr>
                             <div class="home-section-six-button-reservation-container">
-                                <a href="./contact-us.html">Reservation</a>
+                                <a href="contactus.html">Reservation</a>
                             </div>
                         </div>
                         <div class="home-section-six-pricing-card-container">
@@ -309,7 +320,7 @@
                             </div>
                             <hr>
                             <div class="home-section-six-button-reservation-container">
-                                <a href="./contact-us.html">Reservation</a>
+                                <a href="contactus.html">Reservation</a>
                             </div>
                         </div>
                     </div>
@@ -317,7 +328,8 @@
             </section>
             <!-- -----------------------------------------------------------------------------------section-six-ends -->
             <!------------------------------------------------------------------------------------ section-seven-starts -->
-            <section id="section-seven" class="home-section-seven-testimonial-container">
+            <section id="section-seven" class="home-section-seven-testimonial-container" data-aos="fade-up"
+                data-aos-duration="2000">
                 <div class="home-section-seven-testimonial-container">
                     <div class="home-section-seven-testimonial-card-container">
                         <a data-fancybox="gallery"
@@ -346,7 +358,8 @@
             <!----------------------------------------------------------------------------------- section-seven-ends -->
             <!-- -----------------------------------------------------------------------------------section-eight-start -->
 
-            <section id="section-eight" class="home-section-eight-container-client">
+            <section id="section-eight" class="home-section-eight-container-client" data-aos="fade-up"
+                data-aos-duration="2000">
                 <div class="home-section-eight-client-container">
                     <div class="home-section-eight-client-image-container">
                         <div class="home-section-eight-client-image1">
@@ -392,66 +405,7 @@
             <!------------------------------------------------------------------------------------ section-eight-ends -->
             <!------------------------------------------------------------------------------------ section-nine-starts -->
 
-            <section class="home-section-nine-container-contact">
-                <div class="home-section-nine-contact-container">
-                    <div class="home-section-nine-contact-content-container">
-                        <div class="home-section-nine-contact-content-title">
-                            <h3>LETS CONNECTED</h3>
-                            <h2>Lets Connect With Us & Get In Touch With Our Professionals</h2>
-                        </div>
-                        <div class="home-section-nine-contact-content-text">
-                            <p>Let's connect with us and get in touch with our professionals for top-notch grooming
-                                services. We're
-                                here to elevate your style and enhance your grooming experience.</p>
-                        </div>
-                        <address class="home-section-nine-contact-info">
-                            <p>
-                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                Karangploso District, Malang Regency, East Java
-                            </p>
-                            <p>
-                                <span><i class="fa-solid fa-envelope"></i></span>
-                                <a href="mailto:potongin@gmail.com">potongin@gmail.com</a>
-                            </p>
-                            <p>
-                                <span><i class="fa-solid fa-phone"></i></span>
-                                <a href="tel:+6285112345678">(+62) 851 1234 5678</a>
-                            </p>
-                        </address>
-                    </div>
-                    <div class="home-section-nine-contact-map-container">
-                        <div class="home-section-nine-map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.8586899022065!2d-122.08424948469357!3d37.42199977982211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba2f5b4f2f1d%3A0xb3f65d45d90e7b0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614766909443!5m2!1sen!2sus"
-                                width="600" height="400" style="border:0;"></iframe>
-                        </div>
-                        <div class="home-section-nine-contact-form-container">
-                            <form>
-                                <div class="home-section-nine-form">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" name="first-name" id="first-name" placeholder="First Name">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-                                </div>
-                                <div class="home-section-nine-form">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" name="email" id="email" placeholder="Email Address">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" name="subject" id="subject" placeholder="Subject">
-                                </div>
-                                <div class="home-section-nine-form">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" cols="45" rows="5"
-                                        placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="home-section-nine-submit-button">
-                                    <input type="submit" value="Send Message">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <!------------------------------------------------------------------------------------ section-nine-end -->
         </main>
         <!-- ==================================================================================Main ends -->
@@ -468,38 +422,25 @@
                             meticulously crafted by the skilled hands of our experienced barbers.</p>
                     </div>
 
-                    <form action="your-submission-url" method="POST">
-                        <div class="footer-input-email">
-                            <input type="email" name="email" id="my-email" placeholder="Email Address">
-                        </div>
-                        <div class="footer-subscribe-button">
-                            <input type="submit" value="Subscribe">
-                        </div>
-                    </form>
-
                 </div>
                 <div class="footer-quick-links">
                     <h2>Quick Links</h2>
                     <ul>
                         <li>
                             <span><i class="fa-solid fa-caret-right"></i></span>
-                            <a href="./index.html" target="_blank">HomePage</a>
+                            <a href="index.html" target="_blank">HomePage</a>
                         </li>
                         <li>
                             <span><i class="fa-solid fa-caret-right"></i></span>
-                            <a href="./index.html" target="_blank">About Us</a>
+                            <a href="about.html" target="_blank">About Us</a>
                         </li>
                         <li>
                             <span><i class="fa-solid fa-caret-right"></i></span>
-                            <a href="./index.html" target="_blank">Our Services</a>
+                            <a href="services.html" target="_blank">Our Services</a>
                         </li>
                         <li>
                             <span><i class="fa-solid fa-caret-right"></i></span>
-                            <a href="./index.html" target="_blank">Our Packages</a>
-                        </li>
-                        <li>
-                            <span><i class="fa-solid fa-caret-right"></i></span>
-                            <a href="./index.html" target="_blank">Get a donation</a>
+                            <a href="#home-section-six-container-pricings" target="_blank">Our Packages</a>
                         </li>
                     </ul>
                 </div>
@@ -527,7 +468,11 @@
         <!------------------------------------------------------------------------------------ footer-end -->
 
     </div>
-
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="javascript/jquery-migrate-1.2.1.min.js"></script>
+    <script src="javascript/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
